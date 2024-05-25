@@ -1,0 +1,42 @@
+.option-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.option-item input[type="radio"] {
+    margin-right: 8px;
+}
+
+.option-item label {
+    flex-grow: 1;
+}
+
+.option-item .delete-button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.add-option-button {
+    background: #e0e0e0;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 8px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+input[type="radio"]:checked+label {
+    background: #4caf50;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
