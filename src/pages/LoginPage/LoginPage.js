@@ -24,7 +24,7 @@ export default function LoginPage() {
         <Modal
             setIsOpen={setIsModalOpen}>
             <>
-          <Login /> 
+             <Login /> 
               <OptionList />
             </>
         </Modal>

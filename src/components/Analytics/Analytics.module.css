@@ -2,6 +2,9 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
+  padding-top: 70px  ;
+  padding-left: 79px;
+  padding-right:79px;
 }
 
 .Table th, .Table td {
@@ -11,7 +14,7 @@
 }
 
 .Table th {
-  background-color: rgb(85, 85, 238);
+  background-color: #5076FF;
   color: white;
   
 }
@@ -30,9 +33,26 @@
 }
 
 .Table tr:nth-child(odd) {
-  background-color: #b1b0e7; 
+  background-color: #EDEDED;
 }
 
 .Table tr:nth-child(even) {
-  background-color: white; 
+  background-color: #B3C4FF;
+}
+
+.some {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+  background-color: #EDEDED;
+  
+}
+
+.quiz{
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 75px;
+  color : #5076FF;
+  text-align: center;
+  padding-top:60px;
 }
