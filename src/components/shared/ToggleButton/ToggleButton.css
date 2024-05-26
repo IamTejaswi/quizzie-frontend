@@ -1,0 +1,23 @@
+/* src/ToggleButton.css */
+
+.toggle-button {
+  background-color:white;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s;
+  width:200px;
+  border: radius 5px; ;
+}
+
+.toggle-button.selected {
+ box-shadow: 0 0 35px rgb(127, 127, 212);
+}
