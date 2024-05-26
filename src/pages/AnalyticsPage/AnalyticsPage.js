@@ -1,16 +1,24 @@
-import React from "react";
-import Analytics from "../../components/Analytics/Analytics";
-import SideBar from "../../components/shared/SideBar/SideBar";
+import React, { useState }  from 'react'
+import Analytics from "../../components/Analytics/Analytics"
+import Sidebar from '../../components/DashBoard/Sidebar'
+import Modal from '../../components/shared/inputTabs/modal/Modal'
 
 export default function AnalyticsPage() {
+  const [isCreate, setIsCreate] = useState(false)
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ width: "200px" }}>
-        <SideBar />
-      </div>
-      <div style={{ flexGrow: 1, padding: "20px" }}>
-        <Analytics />
-      </div>
+    <div>
+      <Sidebar s={"A"} c={setIsCreate } />
+      <Analytics />
+      {
+        isCreate &&
+        <Modal
+            setIsOpen={setIsCreate}>
+            <>
+             <h1>Hello</h1>
+            </>
+        </Modal>
+        
+      }
     </div>
   );
 }

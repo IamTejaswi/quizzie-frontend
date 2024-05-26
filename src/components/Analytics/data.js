@@ -40,7 +40,15 @@
       Impression: 190,
       actions: ["edit.png", "delete.png", "share.png"],
       2: "question wise analytics",
-    },
+     },
+     {
+      "S.No": 5,
+      "Quiz Name": "English Quiz",
+      "Created on": "2024-05-20",
+      Impression: 190,
+      actions: ["edit.png", "delete.png", "share.png"],
+      2: "question wise analytics",
+     },
 ]
 
 

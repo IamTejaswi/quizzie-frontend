@@ -1,10 +1,16 @@
 import React from 'react'
-import SideBar from "../../components/shared/SideBar/SideBar"
+
+import DashBoard from '../../components/DashBoard/DashBoard'
+import Sidebar from '../../components/DashBoard/Sidebar'
+
 
 export default function DashBoardPage() {
   return (
     <div>
-     <SideBar/>
+
+      <Sidebar s={"D"} />
+      <DashBoard/>
+
     </div>
   )
 }

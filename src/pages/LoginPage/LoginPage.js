@@ -22,10 +22,11 @@ import Login from '../../components/Login/Login'
    };
 
   return (
+
     <div style={elevatedBoxStyle}>
      
       <Login />
-    
+
     </div>
   );
 }

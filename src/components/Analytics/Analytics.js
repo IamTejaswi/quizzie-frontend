@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "../Analytics/Analytics.module.css";
 import data from "../Analytics/data"
 import deleteIcon from "../../assets/delete.png"
 import EditIcon from "../../assets/edit.png"
 import shareIcon from "../../assets/share.png"
+import Modal from "../shared/inputTabs/modal/Modal";
+import DeleteBox from "./deleteBox/DeleteBox";
 
 const iconMap = {
   "delete.png":deleteIcon,
@@ -11,8 +13,24 @@ const iconMap = {
   "share.png":shareIcon
 }
 
+
+
 export default function Analytics() {
+  const [isDelete, setIsDelete] = useState(false)
+  
+  
+  const handleIconClick = (i) => {
+    if (i == 1) {
+      setIsDelete(true)
+    }
+    
+      
+  }
   return (
+    <div className="some">
+     
+        <h1 className={styles.quiz}>Quiz Analysis</h1>
+  
     <div className={styles.Table}>
       <table>
         <tr>
@@ -20,8 +38,8 @@ export default function Analytics() {
           <th>Quiz Name</th>
           <th>Created on</th>
           <th>Impression</th>
-          <th>act </th>
-          <th> 2 </th>
+          <th>actions </th>
+          <th>  </th>
         </tr>
         <tbody>
           {data.map((row, index) => (
@@ -37,7 +55,7 @@ export default function Analytics() {
                     src={iconMap[icon]}
                     alt={`icon-${i}`}
                     style={{ marginRight: "5px", width: '20px', height: '20px' }}
-
+                    onClick = {() => handleIconClick(i)}
                   />
                 ))}
               </td>
@@ -45,7 +63,19 @@ export default function Analytics() {
             </tr>
           ))}
         </tbody>
-      </table>
-    </div>
+        </table>
+        {
+        isDelete &&
+        <Modal
+              setIsOpen={setIsDelete}>
+              <>
+                <DeleteBox d={setIsDelete} />
+                {/* <h1>Hello</h1> */}
+              </>
+        </Modal>
+        
+      }
+      </div>
+      </div>
   );
 }
