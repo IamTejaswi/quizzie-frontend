@@ -1,0 +1,13 @@
+/* InputBox.css */
+.input-box {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.input-box:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  border-color: #00ffff;
+}

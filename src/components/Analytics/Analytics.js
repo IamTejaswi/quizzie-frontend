@@ -2,12 +2,12 @@ import React from "react";
 import styles from "../Analytics/Analytics.module.css";
 import data from "../Analytics/data"
 import deleteIcon from "../../assets/delete.png"
-import EditIcon from "../../assets/Edit.png"
+import EditIcon from "../../assets/edit.png"
 import shareIcon from "../../assets/share.png"
 
 const iconMap = {
   "delete.png":deleteIcon,
-  "Edit.png":EditIcon,
+  "edit.png":EditIcon,
   "share.png":shareIcon
 }
 
@@ -20,7 +20,7 @@ export default function Analytics() {
           <th>Quiz Name</th>
           <th>Created on</th>
           <th>Impression</th>
-          <th>actions </th>
+          <th>act </th>
           <th> 2 </th>
         </tr>
         <tbody>
