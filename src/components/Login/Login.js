@@ -14,14 +14,20 @@ export default function Login() {
     setData({ ...data, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const response = await loginUser({ ...data });
-    if (response) {
-      localStorage.setItem("token", response.token);
-      navigate("/DashBoard");
+  const handleSubmit = (label)=>{
+    setSelectedButton(label);
+    if(label ===  "Log in"){
+      navigate("/Dashboard")
     }
-  };
+  }
+  // async (event) => {
+  //   event.preventDefault();
+  //   const response = await loginUser({ ...data });
+  //   if (response) {
+  //     localStorage.setItem("token", response.token);
+  //     navigate("/DashBoard");
+  //   }
+  // };
 
   const handleToggleClick = (label) => {
     setSelectedButton(label);
@@ -69,9 +75,9 @@ export default function Login() {
           />
         </div>
         <Button
-          onClick={handleSubmit}
           className={styles.button}
           label="Log in"
+          onClick={() => handleSubmit("Log in")}
         />
       </div>
     </div>

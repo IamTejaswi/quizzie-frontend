@@ -1,4 +1,4 @@
-// InputBox.jsx
+
 import React from "react";
 import "./InputBox.css";
 
